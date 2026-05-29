@@ -101,20 +101,20 @@ function EnergyCard({ children }: any) {
 
 function HeroRenderPreview() {
   return (
-    <div className="relative mx-auto max-w-[560px] overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950/60 shadow-2xl shadow-cyan-950/40 backdrop-blur">
+    <div className="relative mx-auto max-w-[620px] overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950/60 shadow-2xl shadow-cyan-950/40 backdrop-blur">
+
       <img
-        src="/images/hero-reactor.png"
-        alt="Xeradia advanced coating platform"
-        className="block w-full object-cover"
+        src="/images/xeradia-plasma-hero.jpeg"
+        alt="Xeradia plasma reactor"
+        className="block h-[460px] w-full object-cover"
       />
+
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-6">
-        <div className="text-xs uppercase tracking-[0.3em] text-cyan-200/70">Advanced coating platform</div>
-        <div className="mt-2 text-2xl font-semibold text-cyan-50">Fusion & fission materials</div>
-      </div>
+
     </div>
   );
 }
+
 
 export default function XeradiaWebsite() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -122,6 +122,14 @@ export default function XeradiaWebsite() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <div
+          className="pointer-events-none absolute inset-0 z-0 opacity-[0.055]"
+          style={{
+          backgroundImage:
+          "linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
       <EnergyFlow />
 
       <section className="relative z-10 min-h-screen border-b border-cyan-300/10">
