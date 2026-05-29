@@ -3,19 +3,19 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Atom, Cpu, Layers, Mail, Menu, Microscope, Shield, Sparkles, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = ["Home", "Technology", "Applications", "Validation", "Vision", "Team", "Contact"];
 
 const applications = [
   {
-    title: "Accident tolerant fuel claddings",
-    subtitle: "PLD-engineered multilayer coatings for fuel cladding protection in advanced fission environments.",
-    icon: Shield,
-  },
-  {
     title: "Fusion tritium barriers",
     subtitle: "Dense ceramic diffusion barriers designed to reduce hydrogen isotope permeation in breeding blankets and primary circuits.",
     icon: Atom,
+  },  {
+    title: "Accident tolerant fuel claddings",
+    subtitle: "PLD-engineered multilayer coatings for fuel cladding protection in advanced fission environments.",
+    icon: Shield,
   },
   {
     title: "LFR & molten metal protection",
@@ -101,20 +101,20 @@ function EnergyCard({ children }: any) {
 
 function HeroRenderPreview() {
   return (
-    <div className="relative mx-auto max-w-[560px] overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950/60 shadow-2xl shadow-cyan-950/40 backdrop-blur">
+    <div className="relative mx-auto max-w-[620px] overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950/60 shadow-2xl shadow-cyan-950/40 backdrop-blur">
+
       <img
-        src="/images/hero-reactor.png"
-        alt="Xeradia advanced coating platform"
-        className="block w-full object-cover"
+        src="/images/xeradia-plasma-hero.jpeg"
+        alt="Xeradia plasma reactor"
+        className="block h-[460px] w-full object-cover"
       />
+
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-6">
-        <div className="text-xs uppercase tracking-[0.3em] text-cyan-200/70">Advanced coating platform</div>
-        <div className="mt-2 text-2xl font-semibold text-cyan-50">Fusion & fission materials</div>
-      </div>
+
     </div>
   );
 }
+
 
 export default function XeradiaWebsite() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -122,6 +122,14 @@ export default function XeradiaWebsite() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <div
+          className="pointer-events-none absolute inset-0 z-0 opacity-[0.055]"
+          style={{
+          backgroundImage:
+          "linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
       <EnergyFlow />
 
       <section className="relative z-10 min-h-screen border-b border-cyan-300/10">
@@ -146,8 +154,19 @@ export default function XeradiaWebsite() {
               <Layers className="h-5 w-5 text-cyan-200" />
             </div>
             <div>
-              <div className="text-xl font-semibold tracking-[0.22em]">XERADIA</div>
-              <div className="text-xs uppercase tracking-[0.32em] text-cyan-200/70">Advanced coatings for fusion & fission energy</div>
+              
+              <div className="flex items-center">
+                  <img
+                    src="/images/xeradia-logo.png"
+                    alt="Xeradia"
+                    width={90}
+                    height={90}
+                    priority
+                    className="h-14 w-auto object-contain"
+                  />
+              </div>
+
+              <div className="text-sm uppercase tracking-[0.32em] text-cyan-200/70 ml-9">COATINGS MADE CLEAR</div>
             </div>
           </a>
 
@@ -284,8 +303,11 @@ export default function XeradiaWebsite() {
 
       
       <section id="contact" className="relative z-10 border-t border-cyan-300/10 bg-slate-950/90 px-6 py-24 backdrop-blur-sm lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Contact</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Let’s build the next generation of nuclear materials together.</h2><p className="mt-6 leading-8 text-slate-300">As the world enters a new era of nuclear energy development, advanced materials are becoming a critical enabling technology for both fusion and next-generation fission systems. Xeradia aims to contribute to this nuclear renaissance through high-performance nanoceramic coatings designed for extreme reactor environments. We welcome reactor developers, industrial partners, research institutions and investors interested in accelerating the deployment of safer, more durable and more efficient nuclear technologies.</p></div><Card className="rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"><CardContent className="p-7"><form className="grid gap-4"><input className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Name and company" /><input className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Email" /><textarea className="min-h-36 rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Tell us about your project, collaboration or investment interest" /><Button className="rounded-full bg-cyan-300 px-7 py-4 text-base text-slate-950 hover:bg-cyan-200"><Mail className="mr-2 inline h-4 w-4" /> Send request</Button></form></CardContent></Card></div>
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-ls uppercase tracking-[0.35em] text-cyan-200">Contact</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Let’s build the next generation of nuclear materials together.</h2><p className="mt-6 leading-8 text-slate-300">As the world enters a new era of nuclear energy development, advanced materials are becoming a critical enabling technology for both fusion and next-generation fission systems. Xeradia aims to contribute to this nuclear renaissance through high-performance nanoceramic coatings designed for extreme reactor environments. We welcome reactor developers, industrial partners, research institutions and investors interested in accelerating the deployment of safer, more durable and more efficient nuclear technologies.</p></div><Card className="rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"><CardContent className="p-7"><form className="grid gap-4"><input className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Name and company" /><input className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Email" /><textarea className="min-h-36 rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Tell us about your project, collaboration or investment interest" /><Button className="rounded-full bg-cyan-300 px-7 py-4 text-base text-slate-950 hover:bg-cyan-200"><Mail className="mr-2 inline h-4 w-4" /> Send request</Button></form></CardContent></Card></div>
       </section>
+      <footer className="border-t border-cyan-300/10 py-6 text-center text-ls tracking-wide text-slate-500">
+        xeradia s.r.l. - Sede legale: Via I. Rosellini 1, 20140 Milano (Italy) – P. IVA 17700991007
+      </footer>
     </main>
   );
 }
