@@ -42,32 +42,32 @@ const teamMembers = [
   {
     name: "Paolo Mutti",
     role: "CEO & Founder",
-    image: "/images/paolo.jpg",
+    image: "/images/paolo.png",
   },
   {
-    name: "Valerio Lattanzi",
-    role: "Chief Scientific Officer",
-    image: "/images/valerio.jpg",
+    name: "Fabio Di Fonzo",
+    role: "CTO & Founder",
+    image: "/images/fabio.jpg",
   },
   {
-    name: "Marco Bianchi",
-    role: "ALD Process Engineer",
-    image: "/images/marco.jpg",
+    name: "Andrea Stinchelli",
+    role: "ALD & PLD Senior Specialist",
+    image: "/images/andrea.png",
   },
   {
-    name: "Alessandro Rossi",
-    role: "PLD Technology Lead",
-    image: "/images/alessandro.jpg",
+    name: "Giulio Fierli",
+    role: "ALD Specialist",
+    image: "/images/giulio.png",
   },
   {
-    name: "Giulia Conti",
-    role: "Materials Characterization",
-    image: "/images/giulia.jpg",
+    name: "Gioele Tornaghi",
+    role: "PLD Specialist",
+    image: "/images/gioele.png",
   },
   {
-    name: "Luca Ferri",
-    role: "Business Development",
-    image: "/images/luca.jpg",
+    name: "Gabriele Caldarini",
+    role: "PLD Specialis",
+    image: "/images/gabriele.png",
   },
 ];
 
