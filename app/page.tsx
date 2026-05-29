@@ -221,7 +221,7 @@ export default function XeradiaWebsite() {
               Advanced nanoceramic coatings for next-generation fusion and fission reactors.
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
-              Xeradia develops multifunctional coatings designed to enhance efficiency and accelerate the deployment of next-generation fusion and fission reactors. By combining Atomic Layer Deposition (ALD) and Pulsed Laser Deposition (PLD) technologies, our high performance coatings provide excellent tritium barrier capabilities and corrosion resistance.
+              Xeradia develops multifunctional coatings designed to enhance efficiency and accelerate the deployment of next-generation fusion and fission reactors By combining Atomic Layer Deposition (ALD) and Pulsed Laser Deposition (PLD) technologies, our high performance coatings provide excellent tritium barrier capabilities and corrosion resistance.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Button className="rounded-full bg-cyan-300 px-7 py-4 text-base text-slate-950 hover:bg-cyan-200" asChild>
@@ -242,7 +242,7 @@ export default function XeradiaWebsite() {
       <section id="technology" className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="mx-auto mb-16 max-w-4xl text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Technology</p>
-          <h2 className="mt-4 text-4xl font-semibold md:text-6xl">Two deposition techniques, infinite possibilities.</h2>
+          <h2 className="mt-4 text-4xl font-semibold md:text-6xl">Two deposition techniques, infinite possibilities</h2>
           <p className="mt-6 leading-8 text-slate-300">
             Xeradia employs both ALD and PLD to meet the diverse requirements of nuclear system. ALD provides precise conformal protection of complex geometry. Whereas, PLD is particularly suited for dense thin film for highly stressing condition. This dual approach allows us to engineer tailored coating solution to overcome current challenges.
           </p>
@@ -251,7 +251,7 @@ export default function XeradiaWebsite() {
         <div className="space-y-24">
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <h3 className="text-4xl font-semibold text-cyan-50 md:text-5xl">Atomic Layer Deposition (ALD).</h3>
+              <h3 className="text-4xl font-semibold text-cyan-50 md:text-5xl">Atomic Layer Deposition (ALD)</h3>
               <p className="mt-6 leading-8 text-slate-300">
                 ALD is capable of producing a layer-by-layer coating exploiting the subsequent selflimiting reactions occurring on the surface. This process was selected to enable coating deposition in areas inaccessible to conventional technologies. Typical applications include tubes and internal cavities, heat exchangers, welded joints, breeding blanket channels, manifolds, and storage tanks. The result is uniform, pinhole-free protection across complex geometries, ensuring reliable performance wherever protection is needed, without the need for plasma-assisted processes.
               </p>
@@ -285,7 +285,7 @@ export default function XeradiaWebsite() {
               </div>
             </div>
             <div>
-              <h3 className="text-4xl font-semibold text-indigo-50 md:text-5xl">Pulsed Layer Deposition (PLD).</h3>
+              <h3 className="text-4xl font-semibold text-indigo-50 md:text-5xl">Pulsed Layer Deposition (PLD)</h3>
               <p className="mt-6 leading-8 text-slate-300">
                 PLD relies on the interaction between a high-energy laser and a target material, generating an ablation plume that deposits onto a substrate maintained at near-room temperature. Xeradia has specialized this process for advanced ceramic materials, producing dense, amorphous thin films with exceptional adhesion and structural integrity. These coatings exhibit outstanding resistance to mechanical, thermal, and irradiation-induced stresses. Furthermore, the precise control of coating composition enables the engineering of multifunctional multilayer architectures for corrosion protection, permeation barriers, and electrical insulation applications.
               </p>
