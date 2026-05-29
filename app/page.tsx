@@ -3,19 +3,19 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Atom, Cpu, Layers, Mail, Menu, Microscope, Shield, Sparkles, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = ["Home", "Technology", "Applications", "Validation", "Vision", "Team", "Contact"];
 
 const applications = [
   {
-    title: "Accident tolerant fuel claddings",
-    subtitle: "PLD-engineered multilayer coatings for fuel cladding protection in advanced fission environments.",
-    icon: Shield,
-  },
-  {
     title: "Fusion tritium barriers",
     subtitle: "Dense ceramic diffusion barriers designed to reduce hydrogen isotope permeation in breeding blankets and primary circuits.",
     icon: Atom,
+  },  {
+    title: "Accident tolerant fuel claddings",
+    subtitle: "PLD-engineered multilayer coatings for fuel cladding protection in advanced fission environments.",
+    icon: Shield,
   },
   {
     title: "LFR & molten metal protection",
@@ -154,8 +154,19 @@ export default function XeradiaWebsite() {
               <Layers className="h-5 w-5 text-cyan-200" />
             </div>
             <div>
-              <div className="text-xl font-semibold tracking-[0.22em]">XERADIA</div>
-              <div className="text-xs uppercase tracking-[0.32em] text-cyan-200/70">Advanced coatings for fusion & fission energy</div>
+              
+              <div className="flex items-center">
+                  <img
+                    src="/images/xeradia-logo.png"
+                    alt="Xeradia"
+                    width={90}
+                    height={90}
+                    priority
+                    className="h-14 w-auto object-contain"
+                  />
+              </div>
+
+              <div className="text-sm uppercase tracking-[0.32em] text-cyan-200/70 ml-9">COATINGS MADE CLEAR</div>
             </div>
           </a>
 
