@@ -66,7 +66,7 @@ const teamMembers = [
   },
   {
     name: "Gabriele Caldarini",
-    role: "PLD Specialis",
+    role: "PLD Specialist",
     image: "/images/gabriele.png",
   },
 ];
