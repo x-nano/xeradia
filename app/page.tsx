@@ -9,33 +9,66 @@ const navItems = ["Home", "Technology", "Applications", "Validation", "Vision", 
 
 const applications = [
   {
-    title: "Fusion tritium barriers",
-    subtitle: "Dense ceramic diffusion barriers designed to reduce hydrogen isotope permeation in breeding blankets and primary circuits.",
+    title: "Tritium barriers for fusion reactors",
+    subtitle: "Our patented coating formulation is engineered to reduce hydrogen isotope permeation in breeding blankets and primary circuits, supporting safety and tritium economy.",
     icon: Atom,
   },  {
-    title: "Accident tolerant fuel claddings",
-    subtitle: "PLD-engineered multilayer coatings for fuel cladding protection in advanced fission environments.",
+    title: "Accident-tolerant fuel for III-Gen fission reactors",
+    subtitle: "Our patented coating solution enhances the resilience of fuel cladding under accident conditions, extending the safety response window.",
     icon: Shield,
   },
   {
-    title: "LFR & molten metal protection",
-    subtitle: "Protective nanoceramic layers for structural steels exposed to molten lead and aggressive liquid-metal environments.",
+    title: "Molten-metal protection for IV-Gen fission reactors",
+    subtitle: "Our patented coating composition improve the performance and safety of steel cladding exposed to high-temperature lead-based coolants.",
     icon: Shield,
   },
 ];
 
 const validation = [
-  { value: ">10³", label: "demonstrated PRF range" },
-  { value: "10⁵", label: "target optimized barrier performance" },
-  { value: "8,000 h", label: "long-term corrosion testing" },
-  { value: "TRL 5→6", label: "startup stage toward demonstration" },
+  { value: ">10³", label: "demostrated Permeation Reduction Factor (PRF)" },
+  { value: "30 DPA at 800°C", label: "High-temperature radiation tolerance" },
+  { value: "8,000 h", label: "long-term corrosion resistance" },
+  { value: ">200 GPa", label: "Elastic modulus" },
 ];
 
 const visionPoints = [
-  "Enable safer and more durable nuclear systems through multifunctional protective coatings.",
-  "Bridge laboratory-scale thin film science with industrial nuclear deployment.",
-  "Develop scalable ALD and PLD coating platforms for next-generation reactors.",
-  "Become a strategic materials partner for fusion and advanced fission ecosystems.",
+  "Engineering multifunctional coating solutions to enhance the performance, economics, and safety of nuclear systems.",
+  "Developing more efficient and reliable ALD and PLD coating systems to enable scaling-up.",
+  "Bridging laboratory-scale thin-film science with industrial nuclear deployment.",
+  "Becoming a strategic materials partner for fusion and fission ecosystems.",
+];
+
+const teamMembers = [
+  {
+    name: "Paolo Mutti",
+    role: "CEO & Founder",
+    image: "/images/paolo.jpg",
+  },
+  {
+    name: "Valerio Lattanzi",
+    role: "Chief Scientific Officer",
+    image: "/images/valerio.jpg",
+  },
+  {
+    name: "Marco Bianchi",
+    role: "ALD Process Engineer",
+    image: "/images/marco.jpg",
+  },
+  {
+    name: "Alessandro Rossi",
+    role: "PLD Technology Lead",
+    image: "/images/alessandro.jpg",
+  },
+  {
+    name: "Giulia Conti",
+    role: "Materials Characterization",
+    image: "/images/giulia.jpg",
+  },
+  {
+    name: "Luca Ferri",
+    role: "Business Development",
+    image: "/images/luca.jpg",
+  },
 ];
 
 function Button({ children, className = "", asChild = false, ...props }: any) {
@@ -188,7 +221,7 @@ export default function XeradiaWebsite() {
               Advanced nanoceramic coatings for next-generation fusion and fission reactors.
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
-              Xeradia develops multifunctional nanoceramic coatings for both fusion and advanced fission reactors, combining ALD and PLD technologies for tritium barriers, corrosion-resistant claddings and high-temperature protection.
+              Xeradia develops multifunctional coatings designed to enhance efficiency and accelerate the deployment of next-generation fusion and fission reactors. By combining Atomic Layer Deposition (ALD) and Pulsed Laser Deposition (PLD) technologies, our high performance coatings provide excellent tritium barrier capabilities and corrosion resistance.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Button className="rounded-full bg-cyan-300 px-7 py-4 text-base text-slate-950 hover:bg-cyan-200" asChild>
@@ -209,24 +242,21 @@ export default function XeradiaWebsite() {
       <section id="technology" className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="mx-auto mb-16 max-w-4xl text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Technology</p>
-          <h2 className="mt-4 text-4xl font-semibold md:text-6xl">Two deposition routes, one nuclear coating platform.</h2>
+          <h2 className="mt-4 text-4xl font-semibold md:text-6xl">Two deposition techniques, infinite possibilities.</h2>
           <p className="mt-6 leading-8 text-slate-300">
-            Xeradia combines Atomic Layer Deposition and Pulsed Laser Deposition to address different nuclear geometries and reactor environments. ALD enables conformal diffusion barriers on complex surfaces, while PLD provides dense multilayer coatings for high-temperature and corrosive conditions. Together, they form a flexible coating platform for fusion and advanced fission systems.
+            Xeradia employs both ALD and PLD to meet the diverse requirements of nuclear system. ALD provides precise conformal protection of complex geometry. Whereas, PLD is particularly suited for dense thin film for highly stressing condition. This dual approach allows us to engineer tailored coating solution to overcome current challenges.
           </p>
         </div>
 
         <div className="space-y-24">
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100">
-                <Microscope className="h-4 w-4" /> Atomic Layer Deposition
-              </div>
-              <h3 className="text-4xl font-semibold text-cyan-50 md:text-5xl">ALD for conformal tritium permeation barriers.</h3>
+              <h3 className="text-4xl font-semibold text-cyan-50 md:text-5xl">Atomic Layer Deposition (ALD).</h3>
               <p className="mt-6 leading-8 text-slate-300">
-                ALD grows ceramic films by sequential, self-limiting surface reactions. This makes it especially valuable for coating complex and internal surfaces such as heat exchanger tubes, blanket channels, manifolds and coolant-facing components where uniformity is essential.
+                ALD is capable of producing a layer-by-layer coating exploiting the subsequent selflimiting reactions occurring on the surface. This process was selected to enable coating deposition in areas inaccessible to conventional technologies. Typical applications include tubes and internal cavities, heat exchangers, welded joints, breeding blanket channels, manifolds, and storage tanks. The result is uniform, pinhole-free protection across complex geometries, ensuring reliable performance wherever protection is needed, without the need for plasma-assisted processes.
               </p>
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
-                {["Conformal coating on complex 3D surfaces", "Dense diffusion barrier against hydrogen isotopes", "Low-temperature processing compatible with steels", "Relevant for breeding blankets and primary circuits"].map((item) => (
+                {["Conformal coating on complex 3D surfaces", "Pure thermal ALD process", "Suitable for multiple substrates", "High throughput via parallelized production"].map((item) => (
                   <div key={item} className="rounded-2xl border border-cyan-300/15 bg-slate-900/60 p-4 text-sm leading-6 text-slate-200">{item}</div>
                 ))}
               </div>
@@ -237,8 +267,8 @@ export default function XeradiaWebsite() {
               </div>
               <div className="rounded-[2rem] border border-cyan-300/20 bg-slate-950/70 p-8 backdrop-blur">
                 <div className="text-xs uppercase tracking-[0.3em] text-cyan-200/70">ALD CASE APPLICATION</div>
-                <h3 className="mt-4 text-4xl font-semibold text-white">Tritium barrier in fusion blankets</h3>
-                <p className="mt-4 text-lg leading-8 text-slate-300">Conformal ceramic diffusion barrier for reducing tritium transport through structural materials.</p>
+                <h3 className="mt-4 text-4xl font-semibold text-white">Tritium barrier in breeding blankets</h3>
+                <p className="mt-4 text-lg leading-8 text-slate-300">Tritium management remains one of the most critical challenges to the future commercialization of fusion energy. Any tritium loss represents both a safety risk and an economic burden. Xeradia addresses this challenge by applying its patented coating technology to fusion reactor breeding blankets, reducing tritium transport through structural materials while mitigating material degradation, embrittlement, and environmental dispersion.</p>
               </div>
             </div>
           </div>
@@ -251,19 +281,16 @@ export default function XeradiaWebsite() {
               <div className="rounded-[2rem] border border-cyan-300/20 bg-slate-950/70 p-8 backdrop-blur">
                 <div className="text-xs uppercase tracking-[0.3em] text-cyan-200/70">PLD CASE APPLICATION</div>
                 <h3 className="mt-4 text-4xl font-semibold text-white">LFR cladding in molten lead</h3>
-                <p className="mt-4 text-lg leading-8 text-slate-300">Dense protective ceramic architecture for steel cladding exposed to lead coolant and high-temperature corrosion.</p>
+                <p className="mt-4 text-lg leading-8 text-slate-300">Today, no structural material can provide long-term protection against corrosion in high-temperature liquid lead environments, representing a major obstacle to the deployment of Lead-cooled Fast Reactors (LFRs). Xeradia addresses this challenge by coating fuel cladding components with its patented ceramic materials, which combine chemical inertness with irradiation stability. This approach enhances the durability, safety, and overall performance of the reactor core under the most demanding operating conditions.</p>
               </div>
             </div>
             <div>
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-300/20 bg-indigo-300/10 px-4 py-2 text-sm text-indigo-100">
-                <Cpu className="h-4 w-4" /> Pulsed Laser Deposition
-              </div>
-              <h3 className="text-4xl font-semibold text-indigo-50 md:text-5xl">PLD for dense multilayer protection in fission environments.</h3>
+              <h3 className="text-4xl font-semibold text-indigo-50 md:text-5xl">Pulsed Layer Deposition (PLD).</h3>
               <p className="mt-6 leading-8 text-slate-300">
-                PLD enables compact, adherent ceramic and ceramic-metal multilayers with strong control over composition and interfaces. For advanced fission systems, this supports protective coating architectures for fuel claddings and structural materials exposed to liquid metals, steam oxidation and severe thermal transients.
+                PLD relies on the interaction between a high-energy laser and a target material, generating an ablation plume that deposits onto a substrate maintained at near-room temperature. Xeradia has specialized this process for advanced ceramic materials, producing dense, amorphous thin films with exceptional adhesion and structural integrity. These coatings exhibit outstanding resistance to mechanical, thermal, and irradiation-induced stresses. Furthermore, the precise control of coating composition enables the engineering of multifunctional multilayer architectures for corrosion protection, permeation barriers, and electrical insulation applications.
               </p>
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
-                {["Dense ceramic multilayers", "Strong adhesion to metallic substrates", "Corrosion and mass-transfer mitigation", "Relevant for LFR and advanced cladding protection"].map((item) => (
+                {["Dense amorphous thin films", "Strong adhesion to metallic substrates", "High temperature corrosion resistance", "Polifunctional multilayer architectures"].map((item) => (
                   <div key={item} className="rounded-2xl border border-indigo-300/15 bg-slate-900/60 p-4 text-sm leading-6 text-slate-200">{item}</div>
                 ))}
               </div>
@@ -276,8 +303,8 @@ export default function XeradiaWebsite() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-4xl">
             <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Applications</p>
-            <h2 className="mt-4 text-4xl font-semibold md:text-5xl">A unified coating platform for fusion and advanced fission reactors.</h2>
-            <p className="mt-6 leading-8 text-slate-300">AAdvanced ceramic coatings engineered for extreme fusion and advanced fission environments. Xeradia develops ALD and PLD barrier architectures for tritium retention, molten metal corrosion protection and high-temperature structural stability. The platform targets breeding blankets, advanced fuel claddings and liquid-metal reactor components exposed to severe thermal and chemical stresses. By combining conformal diffusion barriers with dense multilayer protection, Xeradia aims to enhance material durability, reactor safety and component lifetime in next-generation nuclear systems..</p>
+            <h2 className="mt-4 text-4xl font-semibold md:text-5xl">A viable solution for present and future nuclear challenges</h2>
+            <p className="mt-6 leading-8 text-slate-300">Xeradia solutions are designed to address some of the most critical challenges across current and next-generation nuclear power systems. Xeradia’s patented coating formulations target three key applications: accident-tolerant fuel claddings for today’s reactors, corrosion-resistant steel components for molten-metal cooled fast reactors, and tritium barriers for future fusion power plants.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {applications.map((item) => <Card key={item.title} className="group rounded-3xl border border-cyan-300/15 bg-slate-950/70 text-white transition hover:-translate-y-1 hover:border-cyan-200/40"><EnergyCard><CardContent className="p-7"><div className="mb-8 grid h-14 w-14 place-items-center rounded-2xl bg-cyan-300/10 text-cyan-100"><item.icon className="h-7 w-7" /></div><h3 className="text-2xl font-semibold">{item.title}</h3><p className="mt-4 leading-7 text-slate-300">{item.subtitle}</p></CardContent></EnergyCard></Card>)}
@@ -287,17 +314,35 @@ export default function XeradiaWebsite() {
 
       <section id="validation" className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Validation</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Validated across fusion and advanced fission environments.</h2><p className="mt-6 leading-8 text-slate-300">The technology originates from research and validation campaigns across harsh nuclear environments, including fusion-relevant tritium systems and advanced fission materials testing. Coating architectures have been investigated under high-temperature exposure, corrosive liquid-metal conditions and long-term diffusion challenges representative of next-generation reactor operation. The platform builds on multidisciplinary expertise in thin-film deposition, nuclear materials and surface engineering, with a focus on translating laboratory-scale validation into future industrial nuclear applications.</p></div>
+          <div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Validation</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Validation across fission and fusion environments</h2><p className="mt-6 leading-8 text-slate-300">The technology originates from research and validation campaigns conducted in harsh nuclear environments, including testing relevant to both fission and fusion systems. Coated samples have been studied under high-temperature exposure, corrosive liquid-metal conditions, long-term hydrogen exposure, and heavy ion irradiation, under operating conditions and geometries representative of next-generation reactor designs.</p></div>
           <div className="grid gap-5 sm:grid-cols-2">{validation.map((item) => <Card key={item.value} className="rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"><CardContent className="p-7"><div className="text-4xl font-semibold text-cyan-100">{item.value}</div><p className="mt-4 leading-7 text-slate-300">{item.label}</p></CardContent></Card>)}</div>
         </div>
       </section>
 
       <section id="vision" className="relative z-10 border-y border-cyan-300/10 bg-slate-900/40 px-6 py-24 backdrop-blur-sm lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2"><div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Vision</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Building the material layer for the next nuclear era.</h2><p className="mt-6 leading-8 text-slate-300">Xeradia is currently at TRL 5–6, transitioning from laboratory-scale validation toward early industrial demonstration and reactor-relevant qualification. Current efforts focus on scaling deposition processes, validating long-term coating stability and demonstrating reproducibility on representative nuclear components and geometries. The company’s roadmap targets future integration with advanced fusion and fission supply chains through pilot-scale coating capability, industrial partnerships and reactor-oriented materials testing campaigns.</p></div><div className="space-y-4">{visionPoints.map((step, index) => <motion.div key={step} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }} className="rounded-3xl border border-cyan-300/15 bg-slate-950/70 p-5"><div className="flex gap-4"><span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cyan-300/10 text-sm text-cyan-100">0{index + 1}</span><p className="text-slate-200">{step}</p></div></motion.div>)}</div></div>
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2"><div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Vision</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Building the invisible layer to safeguard the future of nuclear energy</h2><p className="mt-6 leading-8 text-slate-300">Xeradia is currently transitioning from laboratory-scale validation toward early-stage industrial demonstration and reactor-relevant qualification. The company’s roadmap targets future integration into advanced fusion and fission supply chains through pilot-scale coating capabilities, industrial partnerships, and reactor-oriented materials testing campaigns.</p></div><div className="space-y-4">{visionPoints.map((step, index) => <motion.div key={step} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }} className="rounded-3xl border border-cyan-300/15 bg-slate-950/70 p-5"><div className="flex gap-4"><span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cyan-300/10 text-sm text-cyan-100">0{index + 1}</span><p className="text-slate-200">{step}</p></div></motion.div>)}</div></div>
       </section>
 
       <section id="team" className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Team</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">A multidisciplinary team bridging materials science and nuclear engineering.</h2><p className="mt-6 leading-8 text-slate-300">A multidisciplinary team combining expertise in thin-film deposition, nuclear materials science and advanced surface engineering. Xeradia brings together competencies in ALD and PLD technologies, high-temperature materials behaviour, corrosion science and reactor-oriented coating development. The team operates at the intersection of research and industrial innovation, with the objective of translating advanced coating science into scalable solutions for next-generation fusion and fission energy systems.</p></div><div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">{["Thin Film & ALD", "Nuclear Materials", "PLD & Surface Engineering"].map((role) => <Card key={role} className="overflow-hidden rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"><div className="aspect-[4/5] bg-gradient-to-br from-cyan-300/10 via-slate-800 to-indigo-500/10" /><CardContent className="p-6"><h3 className="text-2xl font-semibold">Team Member</h3><p className="mt-2 text-cyan-200">{role}</p><p className="mt-4 leading-7 text-slate-300">Short bio placeholder.</p></CardContent></Card>)}</div></div>
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Team</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">A multidisciplinary team bridging materials science and nuclear engineering</h2><p className="mt-6 leading-8 text-slate-300">Xeradia brings together competencies in ALD and PLD technologies, nuclear materials science, reactor-oriented coating engineering. The team operates at the intersection of research and industrial innovation, with the objective of translating advanced coating science into scalable solutions for next-generation fusion and fission energy systems.</p></div><div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {teamMembers.map((member) => (
+              <Card
+                key={member.name}
+                className="overflow-hidden rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="h-72 w-full object-cover"
+                />
+
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-semibold">{member.name}</h3>
+                  <p className="mt-2 text-cyan-200">{member.role}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div></div>
       </section>
 
       
