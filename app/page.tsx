@@ -161,7 +161,6 @@ export default function XeradiaWebsite() {
                     alt="Xeradia"
                     width={90}
                     height={90}
-                    priority
                     className="h-14 w-auto object-contain"
                   />
               </div>
