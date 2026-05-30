@@ -330,30 +330,104 @@ export default function XeradiaWebsite() {
       </section>
 
       <section id="team" className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Team</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">A multidisciplinary team bridging materials science and nuclear engineering</h2><p className="mt-6 leading-8 text-slate-300">Xeradia brings together competencies in ALD and PLD technologies, nuclear materials science, reactor-oriented coating engineering. The team operates at the intersection of research and industrial innovation, with the objective of translating advanced coating science into scalable solutions for next-generation fusion and fission energy systems.</p></div><div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
+              Team
+            </p>
+
+            <h2 className="mt-4 text-4xl font-semibold md:text-5xl">
+              A multidisciplinary team bridging materials science and nuclear engineering
+            </h2>
+
+            <p className="mt-6 leading-8 text-slate-300">
+              Xeradia brings together competencies in ALD and PLD technologies,
+              nuclear materials science, reactor-oriented coating engineering. The
+              team operates at the intersection of research and industrial innovation,
+              with the objective of translating advanced coating science into scalable
+              solutions for next-generation fusion and fission energy systems.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {teamMembers.map((member) => (
               <Card
-                key={member.name}
+                key={`${member.name}-${member.surname}`}
                 className="overflow-hidden rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"
-              >
+        >
                 <img
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} ${member.surname}`}
                   className="h-72 w-full object-cover"
                 />
 
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-semibold">{member.name}</h3>
-                  <p className="mt-2 text-cyan-200">{member.role}</p>
+                  <h3 className="text-2xl font-semibold leading-tight">
+                    <span className="block">{member.name}</span>
+                    <span className="block">{member.surname}</span>
+                  </h3>
+
+                  <p className="mt-2 text-cyan-200">
+                    {member.role}
+                  </p>
                 </CardContent>
               </Card>
             ))}
-          </div></div>
+          </div>
+        </div>
       </section>
-
       
       <section id="contact" className="relative z-10 border-t border-cyan-300/10 bg-slate-950/90 px-6 py-24 backdrop-blur-sm lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-ls uppercase tracking-[0.35em] text-cyan-200">Contact</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Let’s build the next generation of nuclear materials together.</h2><p className="mt-6 leading-8 text-slate-300">As the world enters a new era of nuclear energy development, advanced materials are becoming a critical enabling technology for both fusion and next-generation fission systems. Xeradia aims to contribute to this nuclear renaissance through high-performance nanoceramic coatings designed for extreme reactor environments. We welcome reactor developers, industrial partners, research institutions and investors interested in accelerating the deployment of safer, more durable and more efficient nuclear technologies.</p></div><Card className="rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"><CardContent className="p-7"><form className="grid gap-4"><input className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Name and company" /><input className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Email" /><textarea className="min-h-36 rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200" placeholder="Tell us about your project, collaboration or investment interest" /><Button className="rounded-full bg-cyan-300 px-7 py-4 text-base text-slate-950 hover:bg-cyan-200"><Mail className="mr-2 inline h-4 w-4" /> Send request</Button></form></CardContent></Card></div>
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="text-ls uppercase tracking-[0.35em] text-cyan-200">Contact</p><h2 className="mt-4 text-4xl font-semibold md:text-5xl">Let’s build the next generation of nuclear materials together.</h2><p className="mt-6 leading-8 text-slate-300">As the world enters a new era of nuclear energy development, advanced materials are becoming a critical enabling technology for both fusion and next-generation fission systems. Xeradia aims to contribute to this nuclear renaissance through high-performance nanoceramic coatings designed for extreme reactor environments. We welcome reactor developers, industrial partners, research institutions and investors interested in accelerating the deployment of safer, more durable and more efficient nuclear technologies.</p></div><Card className="rounded-3xl border border-cyan-300/15 bg-white/[0.04] text-white"><CardContent className="p-7"><form
+                    className="grid gap-4"
+                    onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                      e.preventDefault();
+
+                      const form = e.currentTarget;
+                      const data = new FormData(form);
+
+                      const name = String(data.get("name") || "");
+                      const email = String(data.get("email") || "");
+                      const message = String(data.get("message") || "");
+
+                      const subject = encodeURIComponent("Xeradia contact request");
+                      const body = encodeURIComponent(
+                        `Name and company: ${name}
+Email: ${email}
+
+Message:
+${message}`
+                      );
+
+                      window.location.href = `mailto:info@xeradia.com?subject=${subject}&body=${body}`;
+                    }}
+                  >
+                    <input
+                      name="name"
+                      className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200"
+                      placeholder="Name and company"
+                      required
+                    />
+                    <input
+                      name="email"
+                      type="email"
+                      className="rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200"
+                      placeholder="Email"
+                      required
+                    />
+                    <textarea
+                      name="message"
+                      className="min-h-36 rounded-2xl border border-cyan-300/15 bg-slate-950/70 px-5 py-4 outline-none placeholder:text-slate-500 focus:border-cyan-200"
+                      placeholder="Tell us about your project, collaboration or investment interest"
+                      required
+                    />
+                    <Button
+                      type="submit"
+                      className="rounded-full bg-cyan-300 px-7 py-4 text-base text-slate-950 hover:bg-cyan-200"
+                    >
+                      <Mail className="mr-2 inline h-4 w-4" /> Send request
+                    </Button>
+                  </form></CardContent></Card></div>
       </section>
       <footer className="border-t border-cyan-300/10 py-6 text-center text-ls tracking-wide text-slate-500">
         xeradia s.r.l. - Sede legale: Via I. Rosellini 1, 20124 Milano (Italy) – P. IVA 17700991007
