@@ -40,33 +40,39 @@ const visionPoints = [
 
 const teamMembers = [
   {
-    name: "Paolo Mutti",
+    name: "Paolo",
+    surname: "Mutti",
     role: "CEO & Founder",
     image: "/images/paolo.png",
   },
   {
-    name: "Fabio Di Fonzo",
+    name: "Fabio",
+    surname: "Di Fonzo",
     role: "CTO & Founder",
     image: "/images/fabio.jpg",
   },
   {
-    name: "Andrea Stinchelli",
-    role: "ALD & PLD Senior Specialist",
+    name: "Andrea",
+    surname: "Stinchelli",
+    role: "Nuclear engineering",
     image: "/images/andrea.png",
   },
   {
-    name: "Giulio Fierli",
-    role: "ALD Specialist",
+    name: "Giulio",
+    surname: "Fierli",
+    role: "Equipment design",
     image: "/images/giulio.png",
   },
   {
-    name: "Gioele Tornaghi",
-    role: "PLD Specialist",
+    name: "Gioele",
+    surname: "Tornaghi",
+    role: "Characterization and testing",
     image: "/images/gioele.png",
   },
   {
-    name: "Gabriele Caldarini",
-    role: "PLD Specialist",
+    name: "Gabriele",
+    surname: "Caldarini",
+    role: "Materials Science",
     image: "/images/gabriele.png",
   },
 ];
